@@ -1,0 +1,6 @@
+framework module TQ_Networking {
+  umbrella header "TQ_Networking-umbrella.h"
+
+  export *
+  module * { export * }
+}

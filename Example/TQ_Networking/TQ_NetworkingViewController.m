@@ -7,6 +7,8 @@
 //
 
 #import "TQ_NetworkingViewController.h"
+#import "TQPay.h"
+
 
 @interface TQ_NetworkingViewController ()
 

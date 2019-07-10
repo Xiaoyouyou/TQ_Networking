@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		186F300667E4E2D213AB80FC /* Pods-TQ_Networking_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TQ_Networking_Tests.debug.xcconfig"; path = "Target Support Files/Pods-TQ_Networking_Tests/Pods-TQ_Networking_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		43F25D2FCFF4FC2081684C0C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		43F25D2FCFF4FC2081684C0C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		4E6CF9C00C59F5ED14603429 /* Pods-TQ_Networking_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TQ_Networking_Tests.release.xcconfig"; path = "Target Support Files/Pods-TQ_Networking_Tests/Pods-TQ_Networking_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* TQ_Networking_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TQ_Networking_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -63,8 +63,8 @@
 		7E2B6915A680AFF6C9440FC7 /* Pods_TQ_Networking_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TQ_Networking_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		915AF4D475B366BEC3AB41A0 /* Pods_TQ_Networking_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TQ_Networking_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E0F250970E2E557CC78228E7 /* TQ_Networking.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = TQ_Networking.podspec; path = ../TQ_Networking.podspec; sourceTree = "<group>"; };
-		F097F1266485C146D43EE6CD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E0F250970E2E557CC78228E7 /* TQ_Networking.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TQ_Networking.podspec; path = ../TQ_Networking.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F097F1266485C146D43EE6CD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F25ABCA61E6214BEEDFB2EC4 /* Pods-TQ_Networking_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TQ_Networking_Example.release.xcconfig"; path = "Target Support Files/Pods-TQ_Networking_Example/Pods-TQ_Networking_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F48F954B57F6699C49FDB282 /* Pods-TQ_Networking_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TQ_Networking_Example.debug.xcconfig"; path = "Target Support Files/Pods-TQ_Networking_Example/Pods-TQ_Networking_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,7 +193,6 @@
 				186F300667E4E2D213AB80FC /* Pods-TQ_Networking_Tests.debug.xcconfig */,
 				4E6CF9C00C59F5ED14603429 /* Pods-TQ_Networking_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -249,6 +248,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Xiaoyouyou;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						ProvisioningStyle = Manual;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -259,6 +261,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -325,10 +328,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TQ_Networking_Example/Pods-TQ_Networking_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/TQ_MD5Encryption/TQ_MD5Encryption.framework",
 				"${BUILT_PRODUCTS_DIR}/TQ_Networking/TQ_Networking.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TQ_MD5Encryption.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TQ_Networking.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,12 +518,15 @@
 			baseConfigurationReference = F48F954B57F6699C49FDB282 /* Pods-TQ_Networking_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TQ_Networking/TQ_Networking-Prefix.pch";
 				INFOPLIST_FILE = "TQ_Networking/TQ_Networking-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
@@ -529,12 +537,15 @@
 			baseConfigurationReference = F25ABCA61E6214BEEDFB2EC4 /* Pods-TQ_Networking_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TQ_Networking/TQ_Networking-Prefix.pch";
 				INFOPLIST_FILE = "TQ_Networking/TQ_Networking-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};

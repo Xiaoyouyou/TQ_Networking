@@ -1,0 +1,27 @@
+{
+  "name": "TQ_Networking",
+  "version": "0.1.0",
+  "summary": "A short description of TQ_Networking.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Xiaoyouyou/TQ_Networking",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Xiaoyouyou": "812656410@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/Xiaoyouyou/TQ_Networking.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "TQ_Networking/Classes/**/*",
+  "dependencies": {
+    "TQ_MD5Encryption": [
+      "~> 0.1.0"
+    ]
+  }
+}
