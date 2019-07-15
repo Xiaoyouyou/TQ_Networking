@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TQ_Networking'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'A 网络请求组件 of TQ_Networking.'
 
 # This description is used to generate tags and improve search results.
@@ -39,4 +39,7 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'TQ_MD5Encryption', '~> 0.1.0'
+  
+  
+  
 end

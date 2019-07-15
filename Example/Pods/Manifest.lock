@@ -5,7 +5,7 @@ PODS:
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
   - TQ_MD5Encryption (0.1.0)
-  - TQ_Networking (0.1.0):
+  - TQ_Networking (1.0.0):
     - TQ_MD5Encryption (~> 0.1.0)
 
 DEPENDENCIES:
@@ -24,7 +24,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   TQ_MD5Encryption: ea1d0d15d750e02fe83724b3285f01d6757bf80e
-  TQ_Networking: d39cbf19b3d8628d173bda82f3c9136cd7e107da
+  TQ_Networking: 3b0a67e89e91460f084379331b6ea294d3906aac
 
 PODFILE CHECKSUM: 168df7ef90d066f17d82ac50d381ea6ed8814ddb
 

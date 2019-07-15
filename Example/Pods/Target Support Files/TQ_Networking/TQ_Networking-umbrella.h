@@ -21,6 +21,7 @@
 #import "DYDeviceInfo.h"
 #import "KeyChainManager.h"
 #import "QWSEncipher.h"
+#import "QWSGainIP.h"
 #import "QWSGainUA.h"
 #import "QWSGzip.h"
 #import "QWSNetworkRequest.h"
